@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bin2ejjbl5j8y"]
+[gd_scene load_steps=4 format=3 uid="uid://bin2ejjbl5j8y"]
 
+[ext_resource type="Script" uid="uid://cbdhrwu3pyg4h" path="res://Scenes/PlayBoard/play_board.gd" id="1_kyxtn"]
 [ext_resource type="PackedScene" uid="uid://yfuwp3knnjab" path="res://Scenes/UserBoardCell/UserBoardCell.tscn" id="1_nhkwr"]
 [ext_resource type="PackedScene" uid="uid://b0qqsfcsjsfbn" path="res://Scenes/EnemyBoardCell/EnemyBoardCell.tscn" id="2_0ge2x"]
 
 [node name="PlayBoard" type="Node2D"]
+script = ExtResource("1_kyxtn")
 
 [node name="UserCells" type="Node2D" parent="."]
 
