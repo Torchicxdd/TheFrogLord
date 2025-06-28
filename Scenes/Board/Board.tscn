@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjhkpk1c07vgc"]
+
+[ext_resource type="PackedScene" uid="uid://3yforiakogj1" path="res://Scenes/Bench/Bench.tscn" id="1_vy4eb"]
+[ext_resource type="PackedScene" uid="uid://bin2ejjbl5j8y" path="res://Scenes/PlayBoard/PlayBoard.tscn" id="2_v1rvb"]
+
+[node name="Board" type="Node2D"]
+
+[node name="Bench" parent="." instance=ExtResource("1_vy4eb")]
+position = Vector2(399.645, 185.405)
+
+[node name="PlayBoard" parent="." instance=ExtResource("2_v1rvb")]
+position = Vector2(619.165, 185.405)

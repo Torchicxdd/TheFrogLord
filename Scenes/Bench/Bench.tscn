@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://3yforiakogj1"]
+
+[ext_resource type="PackedScene" uid="uid://yfuwp3knnjab" path="res://Scenes/UserBoardCell/UserBoardCell.tscn" id="1_aktir"]
+
+[node name="Bench" type="Node2D"]
+
+[node name="UserBoardCell" parent="." instance=ExtResource("1_aktir")]
+
+[node name="UserBoardCell2" parent="." instance=ExtResource("1_aktir")]
+position = Vector2(0, 179.49)
+
+[node name="UserBoardCell3" parent="." instance=ExtResource("1_aktir")]
+position = Vector2(0, 358.98)
+
+[node name="UserBoardCell4" parent="." instance=ExtResource("1_aktir")]
+position = Vector2(0, 538.47)
