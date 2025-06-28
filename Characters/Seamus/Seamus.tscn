@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c3jmk2j26hsjk" path="res://Characters/Seamus/seamus.png" id="1_5mggv"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_n75xq"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_hdiw4"]
-[ext_resource type="Script" path="res://Components/trait_component.gd" id="4_abh7p"]
+[ext_resource type="PackedScene" uid="uid://dvcu3ny76ajxb" path="res://Components/TraitComponent.tscn" id="4_abh7p"]
 
 [node name="Seamus" type="Node2D"]
 
@@ -18,5 +18,10 @@ damage = 65
 position = Vector2(104, -48)
 health = 750
 
-[node name="TraitComponent" type="Node" parent="."]
-script = ExtResource("4_abh7p")
+[node name="TraitComponent" parent="." instance=ExtResource("4_abh7p")]
+
+[node name="TraitComponent2" parent="." instance=ExtResource("4_abh7p")]
+trait_name = 4
+
+[node name="TraitComponent3" parent="." instance=ExtResource("4_abh7p")]
+trait_name = 5
