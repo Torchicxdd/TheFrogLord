@@ -15,6 +15,7 @@ centered = false
 damage = 65
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_n75xq")]
+position = Vector2(104, -48)
 health = 750
 
 [node name="TraitComponent" type="Node" parent="."]

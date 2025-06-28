@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://dp0x6l6dj7ckc"]
+[gd_scene load_steps=3 format=3 uid="uid://dp0x6l6dj7ckc"]
+
+[ext_resource type="Texture2D" uid="uid://d3yfp5wuvifkj" path="res://Hud/HealthBars/health_bar_under.png" id="1_p4oct"]
+[ext_resource type="Texture2D" uid="uid://bqnu0x5jg3l0u" path="res://Hud/HealthBars/health_bar_progress.png" id="2_it8rv"]
 
 [node name="HealthBar" type="Control"]
 layout_mode = 3
@@ -8,9 +11,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_right = 136.0
-offset_bottom = 27.0
+offset_right = 89.0
+offset_bottom = 13.0
+scale = Vector2(3.5, 3.5)
 value = 100.0
-show_percentage = false
+texture_under = ExtResource("1_p4oct")
+texture_progress = ExtResource("2_it8rv")
+texture_progress_offset = Vector2(1, 2)
