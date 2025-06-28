@@ -9,7 +9,7 @@
 texture = ExtResource("1_cb1vw")
 centered = false
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="CharacterContainer" type="HBoxContainer" parent="."]
 offset_left = 24.0
 offset_top = -88.0
 offset_right = 1584.0
@@ -17,11 +17,28 @@ offset_bottom = 458.0
 scale = Vector2(0.35, 0.35)
 theme_override_constants/separation = 40
 
-[node name="CardComponent" parent="HBoxContainer" instance=ExtResource("2_4cnev")]
+[node name="CardComponent" parent="CharacterContainer" instance=ExtResource("2_4cnev")]
 layout_mode = 2
 
-[node name="CardComponent2" parent="HBoxContainer" instance=ExtResource("2_4cnev")]
+[node name="CardComponent2" parent="CharacterContainer" instance=ExtResource("2_4cnev")]
 layout_mode = 2
 
-[node name="CardComponent3" parent="HBoxContainer" instance=ExtResource("2_4cnev")]
+[node name="CardComponent3" parent="CharacterContainer" instance=ExtResource("2_4cnev")]
+layout_mode = 2
+
+[node name="ModifierContainer" type="HBoxContainer" parent="."]
+offset_left = 608.0
+offset_top = -88.0
+offset_right = 2168.0
+offset_bottom = 458.0
+scale = Vector2(0.35, 0.35)
+theme_override_constants/separation = 40
+
+[node name="CardComponent" parent="ModifierContainer" instance=ExtResource("2_4cnev")]
+layout_mode = 2
+
+[node name="CardComponent2" parent="ModifierContainer" instance=ExtResource("2_4cnev")]
+layout_mode = 2
+
+[node name="CardComponent3" parent="ModifierContainer" instance=ExtResource("2_4cnev")]
 layout_mode = 2
