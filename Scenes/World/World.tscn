@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://026qqeixxt58"]
+
+[ext_resource type="PackedScene" uid="uid://bjhkpk1c07vgc" path="res://Scenes/Board/Board.tscn" id="1_0nbjp"]
+[ext_resource type="PackedScene" uid="uid://dcuk0ibvtfr3f" path="res://Scenes/Background/Background.tscn" id="1_xf6vi"]
+
+[node name="World" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_xf6vi")]
+
+[node name="Board" parent="." instance=ExtResource("1_0nbjp")]
