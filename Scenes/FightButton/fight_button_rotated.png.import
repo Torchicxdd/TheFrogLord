@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk14jifmsewq"
-path="res://.godot/imported/bohao.png-eacf55dc6c0a479ac571338eb430de02.ctex"
+uid="uid://cynngncxtre5c"
+path="res://.godot/imported/fight_button_rotated.png-6c2ddcad5d2fe32b6fb0d7de50c21f9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Bohao/bohao.png"
-dest_files=["res://.godot/imported/bohao.png-eacf55dc6c0a479ac571338eb430de02.ctex"]
+source_file="res://Scenes/FightButton/fight_button_rotated.png"
+dest_files=["res://.godot/imported/fight_button_rotated.png-6c2ddcad5d2fe32b6fb0d7de50c21f9d.ctex"]
 
 [params]
 
