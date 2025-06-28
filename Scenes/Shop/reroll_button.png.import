@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk14jifmsewq"
-path="res://.godot/imported/bohao.png-eacf55dc6c0a479ac571338eb430de02.ctex"
+uid="uid://dnc4i1dtlbpr"
+path="res://.godot/imported/reroll_button.png-d83f6749b4b09595f02c4962818e4764.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Bohao/bohao.png"
-dest_files=["res://.godot/imported/bohao.png-eacf55dc6c0a479ac571338eb430de02.ctex"]
+source_file="res://Scenes/Shop/reroll_button.png"
+dest_files=["res://.godot/imported/reroll_button.png-d83f6749b4b09595f02c4962818e4764.ctex"]
 
 [params]
 

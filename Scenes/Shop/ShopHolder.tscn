@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://xy6jaeo6p1ne"]
+
+[ext_resource type="Texture2D" uid="uid://1uj4fnym2tc" path="res://Scenes/Shop/shop_holder.png" id="1_cb1vw"]
+
+[node name="ShopHolder" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cb1vw")
+centered = false

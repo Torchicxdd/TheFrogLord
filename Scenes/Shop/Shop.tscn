@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm8ofkpy6d75g"]
+
+[ext_resource type="PackedScene" uid="uid://xy6jaeo6p1ne" path="res://Scenes/Shop/ShopHolder.tscn" id="1_4kyni"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="ShopHolder" parent="." instance=ExtResource("1_4kyni")]

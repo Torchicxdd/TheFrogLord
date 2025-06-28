@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw3htup5wtyvm"]
+
+[ext_resource type="Texture2D" uid="uid://cynngncxtre5c" path="res://Scenes/FightButton/fight_button_rotated.png" id="1_mkmwo"]
+
+[node name="FightButton" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mkmwo")
+centered = false
