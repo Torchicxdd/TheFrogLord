@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://b0qqsfcsjsfbn"]
 
-[ext_resource type="Texture2D" uid="uid://dejqwcoeii3k6" path="res://Scenes/EnemyBoardCell/enemy_board_cell.png" id="1_y773n"]
+[ext_resource type="Texture2D" uid="uid://b10qgrj4gvfy6" path="res://Scenes/EnemyBoardCell/enemy_board_cell.png" id="1_y773n"]
 
 [node name="EnemyBoardCell" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_y773n")
+centered = false
