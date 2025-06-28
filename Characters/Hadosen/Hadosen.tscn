@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://otoejgjkjhby"]
+
+[ext_resource type="Texture2D" uid="uid://bykms0tqyru3g" path="res://Characters/Hadosen/hadosen.png" id="1_5bqrp"]
+[ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_37ybh"]
+[ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_4u4in"]
+
+[node name="Hadosen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5bqrp")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_37ybh")]
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_4u4in")]

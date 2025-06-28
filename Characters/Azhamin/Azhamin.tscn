@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://q843jvss5ahp"]
+
+[ext_resource type="Texture2D" uid="uid://jikoyf2pw3cs" path="res://Characters/Azhamin/azhamin.png" id="1_qd1qu"]
+[ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_i7u0c"]
+[ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_3uxsg"]
+
+[node name="Azhamin" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qd1qu")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_i7u0c")]
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_3uxsg")]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://2dyqckrxh1ua"]
+
+[ext_resource type="Texture2D" uid="uid://dcao5onfx4er6" path="res://Characters/Bek/bek.png" id="1_cqvh7"]
+[ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_88oqh"]
+[ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_uge5g"]
+
+[node name="Bek" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cqvh7")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_88oqh")]
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_uge5g")]

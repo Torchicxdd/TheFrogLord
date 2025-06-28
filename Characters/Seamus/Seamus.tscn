@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbngd4xk13rpx"]
+
+[ext_resource type="Texture2D" uid="uid://cau0yo753wlvb" path="res://Characters/Seamus/seamus.png" id="1_5mggv"]
+[ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_n75xq"]
+[ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_hdiw4"]
+
+[node name="Seamus" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5mggv")
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_hdiw4")]
+damage = 65
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_n75xq")]
+health = 750

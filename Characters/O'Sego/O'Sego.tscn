@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6swi45x40n71"]
+
+[ext_resource type="Texture2D" uid="uid://djse8cp7wne4p" path="res://Characters/O'Sego/o'sego.png" id="1_6oh27"]
+[ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_d8b27"]
+[ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_27ohg"]
+
+[node name="O\'sego" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6oh27")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_d8b27")]
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_27ohg")]
