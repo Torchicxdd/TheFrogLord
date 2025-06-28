@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvcu3ny76ajxb"]
+
+[ext_resource type="Script" uid="uid://dwg37xjf7se4" path="res://Components/trait_component.gd" id="1_xv14k"]
+
+[node name="TraitComponent" type="Node"]
+script = ExtResource("1_xv14k")
