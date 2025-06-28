@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca508op51bl31"]
+
+[ext_resource type="Texture2D" uid="uid://dnc4i1dtlbpr" path="res://Scenes/Shop/reroll_button.png" id="1_ay64j"]
+
+[node name="RerollButton" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ay64j")
+centered = false

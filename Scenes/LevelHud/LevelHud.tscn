@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfo5o0yb1ppbh"]
+
+[ext_resource type="Script" uid="uid://cbig313lqhlvw" path="res://Scenes/LevelHud/level_hud.gd" id="1_jynjl"]
+[ext_resource type="Texture2D" uid="uid://cehwvljqompyh" path="res://Scenes/LevelHud/level1_hud.png" id="1_sf1ql"]
+
+[node name="LevelHud" type="Node2D"]
+script = ExtResource("1_jynjl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sf1ql")
+centered = false

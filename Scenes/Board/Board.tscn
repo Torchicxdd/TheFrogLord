@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjhkpk1c07vgc"]
+[gd_scene load_steps=8 format=3 uid="uid://bjhkpk1c07vgc"]
 
 [ext_resource type="PackedScene" uid="uid://3yforiakogj1" path="res://Scenes/Bench/Bench.tscn" id="1_vy4eb"]
 [ext_resource type="PackedScene" uid="uid://bin2ejjbl5j8y" path="res://Scenes/PlayBoard/PlayBoard.tscn" id="2_v1rvb"]
+[ext_resource type="PackedScene" uid="uid://sdg0ky55uhfa" path="res://Scenes/Resources/Resources.tscn" id="3_04rwb"]
+[ext_resource type="PackedScene" uid="uid://dm8ofkpy6d75g" path="res://Scenes/Shop/Shop.tscn" id="4_7sr81"]
+[ext_resource type="PackedScene" uid="uid://ca508op51bl31" path="res://Scenes/Shop/RerollButton.tscn" id="5_ktpn3"]
+[ext_resource type="PackedScene" uid="uid://cw3htup5wtyvm" path="res://Scenes/FightButton/FightButton.tscn" id="6_4tpf7"]
+[ext_resource type="PackedScene" uid="uid://bfo5o0yb1ppbh" path="res://Scenes/LevelHud/LevelHud.tscn" id="7_6hni7"]
 
 [node name="Board" type="Node2D"]
 
@@ -10,3 +15,18 @@ position = Vector2(399.645, 185.405)
 
 [node name="PlayBoard" parent="." instance=ExtResource("2_v1rvb")]
 position = Vector2(619.165, 185.405)
+
+[node name="Resources" parent="." instance=ExtResource("3_04rwb")]
+position = Vector2(274.71, 953.59)
+
+[node name="Shop" parent="." instance=ExtResource("4_7sr81")]
+position = Vector2(494.83, 953.59)
+
+[node name="RerollButton" parent="." instance=ExtResource("5_ktpn3")]
+position = Vector2(1645.29, 1006.61)
+
+[node name="FightButton" parent="." instance=ExtResource("6_4tpf7")]
+position = Vector2(1624, 928)
+
+[node name="LevelHud" parent="." instance=ExtResource("7_6hni7")]
+position = Vector2(1743.34, 174.33)

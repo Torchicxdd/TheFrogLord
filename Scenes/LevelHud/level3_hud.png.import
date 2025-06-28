@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk14jifmsewq"
-path="res://.godot/imported/bohao.png-eacf55dc6c0a479ac571338eb430de02.ctex"
+uid="uid://tndq8wimwttq"
+path="res://.godot/imported/level3_hud.png-66d618af9e405054f88f1969da0c0f79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Bohao/bohao.png"
-dest_files=["res://.godot/imported/bohao.png-eacf55dc6c0a479ac571338eb430de02.ctex"]
+source_file="res://Scenes/LevelHud/level3_hud.png"
+dest_files=["res://.godot/imported/level3_hud.png-66d618af9e405054f88f1969da0c0f79.ctex"]
 
 [params]
 
