@@ -1,6 +1,6 @@
 class_name LevelHud extends Node2D
 
-var sprite_texture = $Sprite2D.texture
+@onready var sprite_texture = $Sprite2D.texture
 
 func _ready() -> void:
 	SignalBus.connect("start_level", Callable(self, "start_level"))

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bsri3d4bsup6f" path="res://Characters/Bohao/bohao_colourless.png" id="1_ljfir"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_cxe4t"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_xevaj"]
-[ext_resource type="Script" uid="uid://dwg37xjf7se4" path="res://Components/trait_component.gd" id="4_cxe4t"]
+[ext_resource type="Script" path="res://Components/trait_component.gd" id="4_cxe4t"]
 
 [node name="Bohao" type="Node2D"]
 
@@ -12,9 +12,9 @@ texture = ExtResource("1_ljfir")
 centered = false
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_cxe4t")]
+position = Vector2(104, -48)
 
 [node name="DamageComponent" parent="." instance=ExtResource("3_xevaj")]
 
 [node name="TraitComponent" type="Node" parent="."]
 script = ExtResource("4_cxe4t")
-metadata/_custom_type_script = "uid://dwg37xjf7se4"

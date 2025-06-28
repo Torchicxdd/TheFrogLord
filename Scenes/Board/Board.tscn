@@ -10,10 +10,10 @@
 [node name="Board" type="Node2D"]
 
 [node name="Bench" parent="." instance=ExtResource("1_vy4eb")]
-position = Vector2(399.645, 185.405)
+position = Vector2(313.88, 97.11)
 
 [node name="PlayBoard" parent="." instance=ExtResource("2_v1rvb")]
-position = Vector2(619.165, 185.405)
+position = Vector2(533.4, 97.11)
 
 [node name="Resources" parent="." instance=ExtResource("3_04rwb")]
 position = Vector2(274.71, 953.59)
