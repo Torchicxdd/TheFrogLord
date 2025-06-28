@@ -1,7 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://sdg0ky55uhfa"]
+[gd_scene load_steps=4 format=3 uid="uid://sdg0ky55uhfa"]
 
-[ext_resource type="PackedScene" uid="uid://bfwqj3vfveqgn" path="res://Scenes/Resources/ResourceHolder.tscn" id="1_0p083"]
+[ext_resource type="Texture2D" uid="uid://bmackfd406avd" path="res://Scenes/Resources/resource_hud_holder.png" id="2_6ry83"]
+[ext_resource type="PackedScene" uid="uid://cx1oiuuobrq18" path="res://Scenes/Resources/Gold.tscn" id="3_6eyf5"]
+[ext_resource type="PackedScene" uid="uid://blpsftvbhh4cn" path="res://Scenes/Resources/Health.tscn" id="3_pnw6q"]
 
 [node name="Resources" type="Node2D"]
 
-[node name="ResourceHolder" parent="." instance=ExtResource("1_0p083")]
+[node name="ResourceBackground" type="Sprite2D" parent="."]
+texture = ExtResource("2_6ry83")
+centered = false
+
+[node name="Health" parent="." instance=ExtResource("3_pnw6q")]
+position = Vector2(56, 48)
+
+[node name="Gold" parent="." instance=ExtResource("3_6eyf5")]
+position = Vector2(67.5, 78.53)
