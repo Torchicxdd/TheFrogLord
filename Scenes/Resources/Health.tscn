@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://blpsftvbhh4cn"]
+
+[ext_resource type="Script" uid="uid://b8a6go4v32mqv" path="res://Scenes/Resources/health.gd" id="1_7nt0h"]
+[ext_resource type="Texture2D" uid="uid://caolvfhs7mh3r" path="res://Scenes/Resources/full_heart.png" id="1_eeahl"]
+
+[node name="Health" type="Node2D"]
+script = ExtResource("1_7nt0h")
+
+[node name="Heart" type="Sprite2D" parent="."]
+texture = ExtResource("1_eeahl")
+centered = false
+
+[node name="Heart2" type="Sprite2D" parent="."]
+texture = ExtResource("1_eeahl")
+centered = false
+offset = Vector2(33.93, 0)
+
+[node name="Heart3" type="Sprite2D" parent="."]
+texture = ExtResource("1_eeahl")
+centered = false
+offset = Vector2(67.86, 0)

@@ -8,6 +8,7 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_5mggv")
+centered = false
 
 [node name="DamageComponent" parent="." instance=ExtResource("3_hdiw4")]
 damage = 65

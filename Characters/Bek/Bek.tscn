@@ -8,6 +8,7 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_cqvh7")
+centered = false
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_88oqh")]
 

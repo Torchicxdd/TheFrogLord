@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx1oiuuobrq18"]
+
+[ext_resource type="Script" uid="uid://d1cjg7xrn7hmf" path="res://Scenes/Resources/gold.gd" id="1_5y2ve"]
+[ext_resource type="Texture2D" uid="uid://cufap5mms30dl" path="res://Scenes/Resources/gold.png" id="1_65rgi"]
+
+[node name="Gold" type="Node2D"]
+script = ExtResource("1_5y2ve")
+
+[node name="GoldIcon" type="Sprite2D" parent="."]
+position = Vector2(0, 2.75)
+texture = ExtResource("1_65rgi")
+centered = false
+
+[node name="GoldLabel" type="Label" parent="."]
+offset_left = 33.24
+offset_right = 68.24
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(1, 0.752941, 0.227451, 1)
+theme_override_font_sizes/font_size = 22
+text = "0 G"
