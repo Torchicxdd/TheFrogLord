@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b76xpikyy05vt"]
+[gd_scene load_steps=3 format=3 uid="uid://b76xpikyy05vt"]
 
 [ext_resource type="Script" uid="uid://bb1qconqsvn10" path="res://Components/health_component.gd" id="1_u3arf"]
+[ext_resource type="PackedScene" uid="uid://dp0x6l6dj7ckc" path="res://Hud/HealthBars/HealthBar.tscn" id="2_q8xte"]
 
 [node name="HealthComponent" type="Node2D"]
 script = ExtResource("1_u3arf")
+
+[node name="HealthBar" parent="." instance=ExtResource("2_q8xte")]
