@@ -7,12 +7,14 @@ func _ready():
 	# Connect the button's pressed signal to the _on_pressed function
 	connect("pressed", Callable(self, "_on_pressed"))
 
-# When the button is pressed, it will trigger the buy_card function
+# When the button is pressed, emmit signal to check if the card can be bought
 func _on_pressed():
-	buy_card()
-	# After the card has been bought, delete the button
-	queue_free()
+	SignalBus.emit_signal("check_if_card_can_be_bought", card_name, cost)
+	print("Checking if card can be bought: %s for %d" % [card_name, cost])
 
 func buy_card():
-	print("Card bought: %s for %d" % [card_name, cost])
 	SignalBus.emit_signal("card_bought", card_name, cost)
+	print("Card bought: %s for %d" % [card_name, cost])
+
+	# After the card has been bought, delete the button
+	queue_free()
