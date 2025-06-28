@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dm8ofkpy6d75g"]
+[gd_scene load_steps=3 format=3 uid="uid://dm8ofkpy6d75g"]
 
 [ext_resource type="PackedScene" uid="uid://xy6jaeo6p1ne" path="res://Scenes/Shop/ShopHolder.tscn" id="1_4kyni"]
+[ext_resource type="PackedScene" uid="uid://ca508op51bl31" path="res://Scenes/Shop/RerollButton.tscn" id="2_ora3x"]
 
 [node name="Shop" type="Node2D"]
 
 [node name="ShopHolder" parent="." instance=ExtResource("1_4kyni")]
+
+[node name="RerollButton" parent="." instance=ExtResource("2_ora3x")]
+position = Vector2(1150.46, 53.02)
