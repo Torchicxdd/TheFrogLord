@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://3yforiakogj1"]
+[gd_scene load_steps=3 format=3 uid="uid://3yforiakogj1"]
 
 [ext_resource type="PackedScene" uid="uid://yfuwp3knnjab" path="res://Scenes/UserBoardCell/UserBoardCell.tscn" id="1_aktir"]
+[ext_resource type="Script" uid="uid://16glvqlsgwns" path="res://Scenes/Bench/bench.gd" id="1_rwm4o"]
 
 [node name="Bench" type="Node2D"]
+script = ExtResource("1_rwm4o")
 
 [node name="UserBoardCell" parent="." instance=ExtResource("1_aktir")]
 
