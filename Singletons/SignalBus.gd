@@ -9,5 +9,5 @@ signal check_if_card_can_be_bought(card_name: String, cost: int, card_type: int)
 signal buy_card(card_name: String, cost: int, card_type: int)
 signal check_if_shop_can_be_rerolled()
 signal reroll_shop()
-signal is_placing_character(is_placing: bool, character: Character)
-signal place_character(cell: Node2D, character: Character)
+signal is_placing_character(is_placing: bool, character: Character, from: Cell) # Character being help in mouse
+signal place_character(cell: Cell)
