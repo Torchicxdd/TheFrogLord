@@ -1,7 +1,8 @@
 extends Node2D
 
+@onready var gold_text = $GoldLabel.text
+
 var gold: int = 0
-var gold_text = $GoldLabel.text
 
 func _ready() -> void:
 	SignalBus.connect("gain_gold", Callable(self, "add_gold"))
