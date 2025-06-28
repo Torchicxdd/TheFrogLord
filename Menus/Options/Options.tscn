@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqo0flkmxxm7a"]
+
+[ext_resource type="Script" uid="uid://2pu5b1nyedw5" path="res://Menus/Options/options.gd" id="1_0glsu"]
+[ext_resource type="FontFile" uid="uid://b26i5rrvivsrq" path="res://Assets/Options/FreckleFace-Regular.ttf" id="2_0glsu"]
+[ext_resource type="Texture2D" uid="uid://dhngwlmfitfc6" path="res://Menus/Options/optionsbg.png" id="2_bybm2"]
+[ext_resource type="PackedScene" uid="uid://q66wg7fda3c8" path="res://Menus/Options/Settings_Tab.tscn" id="2_lv7g6"]
+[ext_resource type="Texture2D" uid="uid://co7nijk4b8wvy" path="res://Themes/backIcon.png" id="5_owvdv"]
+[ext_resource type="Texture2D" uid="uid://8i507yhunpxn" path="res://Themes/home icon.png" id="6_ogila"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owvdv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bybm2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogila"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bybm2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Options" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_0glsu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -349.0
+offset_top = -140.0
+offset_right = 291.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bybm2")
+
+[node name="center container" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.25
+anchor_bottom = 1.075
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="center container"]
+custom_minimum_size = Vector2(1206, 846)
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Label" type="Label" parent="center container/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0glsu")
+theme_override_font_sizes/font_size = 64
+text = "Options"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="center container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 680)
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="SettingsTab" parent="center container/VBoxContainer/VBoxContainer" instance=ExtResource("2_lv7g6")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="center container/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="center container/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+
+[node name="back btn" type="Button" parent="center container/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_owvdv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bybm2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ogila")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bybm2")
+text = "Back"
+icon = ExtResource("5_owvdv")
+
+[node name="Control" type="Control" parent="center container/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="center container/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 32
+
+[node name="menu btn" type="Button" parent="center container/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_owvdv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bybm2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ogila")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bybm2")
+text = "Main Menu"
+icon = ExtResource("6_ogila")
+
+[connection signal="pressed" from="center container/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/back btn" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="center container/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer2/menu btn" to="." method="_on_button_pressed"]
