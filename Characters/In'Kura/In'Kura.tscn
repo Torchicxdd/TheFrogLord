@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://eak38e4q61wh"]
+[gd_scene load_steps=5 format=3 uid="uid://eak38e4q61wh"]
 
-[ext_resource type="Texture2D" uid="uid://dogr8rebfnmlr" path="res://Characters/In'Kura/in'kura.png" id="1_8ndfk"]
+[ext_resource type="Texture2D" uid="uid://cfitgfuelnlog" path="res://Characters/In'Kura/in'kura.png" id="1_8ndfk"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_weeq1"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_j0l0x"]
+[ext_resource type="Script" uid="uid://dwg37xjf7se4" path="res://Components/trait_component.gd" id="4_j0l0x"]
 
 [node name="In\'kura" type="Node2D"]
 
@@ -13,3 +14,7 @@ centered = false
 [node name="HealthComponent" parent="." instance=ExtResource("2_weeq1")]
 
 [node name="DamageComponent" parent="." instance=ExtResource("3_j0l0x")]
+
+[node name="TraitComponent" type="Node" parent="."]
+script = ExtResource("4_j0l0x")
+metadata/_custom_type_script = "uid://dwg37xjf7se4"

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://q843jvss5ahp"]
+[gd_scene load_steps=5 format=3 uid="uid://q843jvss5ahp"]
 
-[ext_resource type="Texture2D" uid="uid://jikoyf2pw3cs" path="res://Characters/Azhamin/azhamin.png" id="1_qd1qu"]
+[ext_resource type="Texture2D" uid="uid://c0320vun5sw0q" path="res://Characters/Azhamin/azhamin.png" id="1_qd1qu"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_i7u0c"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_3uxsg"]
+[ext_resource type="Script" uid="uid://dwg37xjf7se4" path="res://Components/trait_component.gd" id="4_i7u0c"]
 
 [node name="Azhamin" type="Node2D"]
 
@@ -13,3 +14,7 @@ centered = false
 [node name="HealthComponent" parent="." instance=ExtResource("2_i7u0c")]
 
 [node name="DamageComponent" parent="." instance=ExtResource("3_3uxsg")]
+
+[node name="TraitComponent" type="Node" parent="."]
+script = ExtResource("4_i7u0c")
+metadata/_custom_type_script = "uid://dwg37xjf7se4"
