@@ -14,6 +14,10 @@ config/name="TheFrogLord"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://x8gkmd8p6pak"
+
 [autoload]
 
 SignalBus="*res://Singletons/SignalBus.gd"
