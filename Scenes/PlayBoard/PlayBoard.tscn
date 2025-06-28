@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3 uid="uid://bin2ejjbl5j8y"]
+
+[ext_resource type="PackedScene" uid="uid://yfuwp3knnjab" path="res://Scenes/UserBoardCell/UserBoardCell.tscn" id="1_nhkwr"]
+[ext_resource type="PackedScene" uid="uid://b0qqsfcsjsfbn" path="res://Scenes/EnemyBoardCell/EnemyBoardCell.tscn" id="2_0ge2x"]
+
+[node name="PlayBoard" type="Node2D"]
+
+[node name="UserCells" type="Node2D" parent="."]
+
+[node name="UserBoardCell" parent="UserCells" instance=ExtResource("1_nhkwr")]
+
+[node name="UserBoardCell2" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(0, 179.49)
+
+[node name="UserBoardCell3" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(0, 358.98)
+
+[node name="UserBoardCell4" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(0, 538.47)
+
+[node name="UserBoardCell5" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(179.37, 0)
+
+[node name="UserBoardCell6" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(179.37, 179.49)
+
+[node name="UserBoardCell7" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(179.37, 358.98)
+
+[node name="UserBoardCell8" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(179.37, 538.47)
+
+[node name="UserBoardCell9" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(358.74, 0)
+
+[node name="UserBoardCell10" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(358.74, 179.49)
+
+[node name="UserBoardCell11" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(358.74, 358.98)
+
+[node name="UserBoardCell12" parent="UserCells" instance=ExtResource("1_nhkwr")]
+position = Vector2(358.74, 538.47)
+
+[node name="Enemycells" type="Node2D" parent="."]
+
+[node name="EnemyBoardCell" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(538.1, 0)
+
+[node name="EnemyBoardCell2" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(538.1, 179.47)
+
+[node name="EnemyBoardCell3" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(538.1, 358.98)
+
+[node name="EnemyBoardCell4" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(538.1, 538.47)
+
+[node name="EnemyBoardCell5" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(717.47, 0)
+
+[node name="EnemyBoardCell6" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(717.47, 179.47)
+
+[node name="EnemyBoardCell7" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(717.47, 358.98)
+
+[node name="EnemyBoardCell8" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(717.47, 538.47)
+
+[node name="EnemyBoardCell9" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(896.84, 0)
+
+[node name="EnemyBoardCell10" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(896.84, 179.47)
+
+[node name="EnemyBoardCell11" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(896.84, 358.98)
+
+[node name="EnemyBoardCell12" parent="Enemycells" instance=ExtResource("2_0ge2x")]
+position = Vector2(896.84, 538.47)
