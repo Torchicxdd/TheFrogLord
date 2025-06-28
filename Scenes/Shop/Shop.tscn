@@ -8,4 +8,7 @@
 [node name="ShopHolder" parent="." instance=ExtResource("1_4kyni")]
 
 [node name="RerollButton" parent="." instance=ExtResource("2_ora3x")]
-position = Vector2(1150.46, 53.02)
+offset_left = 1150.46
+offset_top = 53.02
+offset_right = 1265.46
+offset_bottom = 97.02

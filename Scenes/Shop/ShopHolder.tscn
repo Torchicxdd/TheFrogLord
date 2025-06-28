@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://xy6jaeo6p1ne"]
+[gd_scene load_steps=4 format=3 uid="uid://xy6jaeo6p1ne"]
 
 [ext_resource type="Texture2D" uid="uid://1uj4fnym2tc" path="res://Scenes/Shop/shop_holder.png" id="1_cb1vw"]
+[ext_resource type="Script" uid="uid://6qm2sgbiybl2" path="res://Scenes/Shop/shop_holder.gd" id="1_doyii"]
 [ext_resource type="PackedScene" uid="uid://jct7kyv2xesr" path="res://Components/CardComponent.tscn" id="2_4cnev"]
 
 [node name="ShopHolder" type="Node2D"]
+script = ExtResource("1_doyii")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_cb1vw")
