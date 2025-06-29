@@ -3,11 +3,9 @@ extends Node2D
 func _ready():
 	# Connect the reroll_shop signal to the reroll_shop function
 	SignalBus.connect("reroll_shop", Callable(self, "reroll_shop"))
+	SignalBus.connect("buy_card", Callable(self, "buy_card"))
 
 func reroll_shop():
-	# This function will be called when the reroll_shop signal is emitted
-	print("Rerolling shop items")
-	
 	# Arrays containg the current characters and modifiers in the shop 
 	var current_characters : Array = $CharacterContainer.get_children()
 	var current_modifiers : Array = $ModifierContainer.get_children()
@@ -34,5 +32,6 @@ func reroll_shop():
 		modifier.card_type = CardComponent.CardType.MODIFIER
 		$ModifierContainer.add_child(modifier)
 	
-	
-	
+func buy_card(card: CardComponent):
+	# After the card has been bought, delete the button
+	card.queue_free()
