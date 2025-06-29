@@ -39,7 +39,6 @@ image = ExtResource("5_jvby4")
 [node name="Croakers" parent="." instance=ExtResource("2_cjpom")]
 offset_top = 384.0
 offset_bottom = 384.0
-trait_name = 0
 trait_thresholds = Array[int]([3, 5, 7])
 trait_label_name = "Croakers"
 image = ExtResource("5_jtha6")
@@ -47,7 +46,6 @@ image = ExtResource("5_jtha6")
 [node name="Explorers" parent="." instance=ExtResource("2_cjpom")]
 offset_top = 480.0
 offset_bottom = 480.0
-trait_name = 1
 trait_thresholds = Array[int]([3, 5, 7])
 trait_label_name = "Explorers"
 image = ExtResource("7_v4j8t")

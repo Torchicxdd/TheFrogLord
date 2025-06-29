@@ -7,12 +7,16 @@
 script = ExtResource("1_rwm4o")
 
 [node name="UserBoardCell" parent="." instance=ExtResource("1_aktir")]
+cell_type = 0
 
 [node name="UserBoardCell2" parent="." instance=ExtResource("1_aktir")]
 position = Vector2(0, 179.49)
+cell_type = 0
 
 [node name="UserBoardCell3" parent="." instance=ExtResource("1_aktir")]
 position = Vector2(0, 358.98)
+cell_type = 0
 
 [node name="UserBoardCell4" parent="." instance=ExtResource("1_aktir")]
 position = Vector2(0, 538.47)
+cell_type = 0

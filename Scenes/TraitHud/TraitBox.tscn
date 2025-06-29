@@ -37,6 +37,7 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("3_aju00")
 
 [node name="TraitLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 48.0
 offset_top = -16.0
 offset_right = 1042.0
