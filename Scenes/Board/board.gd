@@ -16,8 +16,26 @@ func check_if_shop_can_be_rerolled():
 
 func check_if_card_can_be_bought(card: CardComponent):
 	var current_gold = $Resources/Gold.gold
-	if current_gold >= card.cost:
+	var bench = $Bench.get_children()
+	var open_bench_slot: Cell = null
+
+	for cell: Cell in bench:
+		if not cell.is_occupied:
+			open_bench_slot = cell
+			break
+	
+	if current_gold >= card.cost and open_bench_slot:
+		create_character(card, open_bench_slot)
+
 		SignalBus.emit_signal("buy_card", card)
 		SignalBus.emit_signal("lose_gold", card.cost)
 	else:
-		print("Not enough gold to buy the card: ", card.card_name, ". Current gold: ", current_gold)
+		print("Cannot buy card OpenBenchSlot:", open_bench_slot, "Current_Gold:", current_gold)
+
+func create_character(card: CardComponent, cell: Cell):
+	print("res://Characters/%s/%s.tscn" % [card.card_name, card.card_name])
+	var character = load("res://Characters/%s/%s.tscn" % [card.card_name, card.card_name]).instantiate()
+	if character is Bohao:
+		print("Character is Bohao inside create_character()")
+	cell.place_character(character, cell.INCOMING_LOCATION.SHOP)
+	print("Character created from card: ", card.card_name, " at cell: ", cell)

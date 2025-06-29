@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7k2cldj4ihf1"]
+[gd_scene load_steps=7 format=3 uid="uid://b7k2cldj4ihf1"]
 
 [ext_resource type="Texture2D" uid="uid://bsri3d4bsup6f" path="res://Characters/Bohao/bohao_colourless.png" id="1_ljfir"]
+[ext_resource type="Script" uid="uid://oievx3rasqtc" path="res://Characters/Bohao/bohao.gd" id="1_rkewl"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_cxe4t"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_xevaj"]
-[ext_resource type="Script" path="res://Components/trait_component.gd" id="4_cxe4t"]
+[ext_resource type="Script" uid="uid://dwg37xjf7se4" path="res://Components/trait_component.gd" id="4_cxe4t"]
 [ext_resource type="PackedScene" uid="uid://bam7bedehv30h" path="res://Components/CharacterComponent.tscn" id="5_xevaj"]
 
 [node name="Bohao" type="Node2D"]
+z_index = 1
+script = ExtResource("1_rkewl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ljfir")
