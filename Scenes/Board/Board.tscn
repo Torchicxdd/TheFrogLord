@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjhkpk1c07vgc"]
+[gd_scene load_steps=9 format=3 uid="uid://bjhkpk1c07vgc"]
 
 [ext_resource type="Script" uid="uid://1j3rmixq00mr" path="res://Scenes/Board/board.gd" id="1_e4ntg"]
 [ext_resource type="PackedScene" uid="uid://3yforiakogj1" path="res://Scenes/Bench/Bench.tscn" id="1_vy4eb"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dm8ofkpy6d75g" path="res://Scenes/Shop/Shop.tscn" id="4_7sr81"]
 [ext_resource type="PackedScene" uid="uid://cw3htup5wtyvm" path="res://Scenes/FightButton/FightButton.tscn" id="6_4tpf7"]
 [ext_resource type="PackedScene" uid="uid://bfo5o0yb1ppbh" path="res://Scenes/LevelHud/LevelHud.tscn" id="7_6hni7"]
+[ext_resource type="PackedScene" uid="uid://eqxhxx1eagjf" path="res://Scenes/TraitHud/TraitHud.tscn" id="8_e4ntg"]
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_e4ntg")
@@ -28,3 +29,6 @@ position = Vector2(1624, 928)
 
 [node name="LevelHud" parent="." instance=ExtResource("7_6hni7")]
 position = Vector2(1743.34, 174.33)
+
+[node name="TraitHud" parent="." instance=ExtResource("8_e4ntg")]
+position = Vector2(96, 224)
