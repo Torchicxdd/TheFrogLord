@@ -35,7 +35,6 @@ func check_if_card_can_be_bought(card: CardComponent):
 func create_character(card: CardComponent, cell: Cell):
 	print("res://Characters/%s/%s.tscn" % [card.card_name, card.card_name])
 	var character = load("res://Characters/%s/%s.tscn" % [card.card_name, card.card_name]).instantiate()
-	if character is Bohao:
-		print("Character is Bohao inside create_character()")
+	cell.add_child(character)
 	cell.place_character(character, cell.INCOMING_LOCATION.SHOP)
 	print("Character created from card: ", card.card_name, " at cell: ", cell)

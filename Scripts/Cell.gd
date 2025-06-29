@@ -4,6 +4,8 @@ enum INCOMING_LOCATION {SHOP, BOARD}
 
 var is_occupied: bool = false
 var character: Character = null
+const x_offset = 0
+const y_offset = -30
 
 func place_character(incoming_character: Character, place_type: INCOMING_LOCATION, from: Cell = null) -> void:
 	match place_type:
@@ -11,6 +13,7 @@ func place_character(incoming_character: Character, place_type: INCOMING_LOCATIO
 			is_occupied = true
 			character = incoming_character
 			character.position = position
+			character.position =+ Vector2(x_offset, y_offset)
 		INCOMING_LOCATION.BOARD:
 			if is_occupied:
 				# Swap characters
