@@ -16,7 +16,6 @@ func place_character(incoming_character: Character, place_type: INCOMING_LOCATIO
 		INCOMING_LOCATION.SHOP:
 			is_occupied = true
 			character = incoming_character
-			character.reparent(self)
 			character.position = Vector2.ZERO
 			character.position += Vector2(x_offset, y_offset)
 		INCOMING_LOCATION.BOARD:
