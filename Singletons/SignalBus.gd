@@ -9,5 +9,7 @@ signal check_if_card_can_be_bought(card: CardComponent)
 signal buy_card(card: CardComponent)
 signal check_if_shop_can_be_rerolled()
 signal reroll_shop()
-signal is_placing_character(is_placing: bool, character: Character, from: Cell) # Character being help in mouse
+signal is_placing_character(incoming_character: Character, from: Cell)
+signal is_not_placing_character()
+signal dropped_character()
 signal place_character(cell: Cell)

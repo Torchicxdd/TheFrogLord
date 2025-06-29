@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bmackfd406avd" path="res://Scenes/Resources/resource_hud_holder.png" id="2_6ry83"]
 [ext_resource type="PackedScene" uid="uid://cvdxo5g3j4i35" path="res://Scenes/Resources/Gold.tscn" id="3_6eyf5"]
-[ext_resource type="PackedScene" path="res://Scenes/Resources/Health.tscn" id="3_pnw6q"]
+[ext_resource type="PackedScene" uid="uid://blpsftvbhh4cn" path="res://Scenes/Resources/Health.tscn" id="3_pnw6q"]
 
 [node name="Resources" type="Node2D"]
 
