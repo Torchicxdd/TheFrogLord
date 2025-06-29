@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://x8gkmd8p6pak"
 [autoload]
 
 SignalBus="*res://Singletons/SignalBus.gd"
+PreloadedEnemies="*res://Enemies/PreloadedEnemies.gd"
 
 [display]
 

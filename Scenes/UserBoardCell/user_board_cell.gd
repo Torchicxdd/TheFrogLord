@@ -33,14 +33,11 @@ func _dropped_character() -> void:
 func _on_area_2d_mouse_entered() -> void:
 	is_hovering = true
 	if is_placing_character:
-		SignalBus.emit_signal("is_placing_character_and_hovering_over_cell", true)
 		sprite.texture = load("res://Scenes/UserBoardCell/user_board_cell_hover.png")
 
 func _on_area_2d_mouse_exited() -> void:
 	is_hovering = false
 	sprite.texture = load("res://Scenes/UserBoardCell/user_board_cell.png")
-	if is_placing_character:
-		SignalBus.emit_signal("is_placing_character_and_hovering_over_cell", false)
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left_click") and is_hovering and is_occupied:

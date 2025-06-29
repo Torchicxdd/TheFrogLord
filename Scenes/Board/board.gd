@@ -48,7 +48,6 @@ func create_character(card: CardComponent, cell: Cell):
 func _is_placing_character(character: Character, from_cell: Cell) -> void:
 	is_placing_character = true
 	incoming_character = character
-	print("Is placing")
 
 func _is_not_placing_character() -> void:
 	is_placing_character = false

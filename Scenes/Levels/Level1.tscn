@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkwsmkob11dj8"]
+
+[ext_resource type="PackedScene" uid="uid://026qqeixxt58" path="res://Scenes/World/World.tscn" id="1_5jgm0"]
+[ext_resource type="PackedScene" uid="uid://cg10j4itgatc4" path="res://Components/LevelComponent.tscn" id="2_36ke7"]
+[ext_resource type="PackedScene" uid="uid://ceesii7v3yp4q" path="res://Scenes/Levels/Level1EnemyData.tscn" id="3_riv1q"]
+[ext_resource type="Script" uid="uid://ciuvxgqhfk62c" path="res://Scenes/Levels/level_1_enemy_data.gd" id="4_xvio3"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("1_5jgm0")]
+
+[node name="Level1EnemyData" parent="." instance=ExtResource("3_riv1q")]
+script = ExtResource("4_xvio3")
+
+[node name="LevelComponent" parent="." node_paths=PackedStringArray("levelEnemyData", "world") instance=ExtResource("2_36ke7")]
+levelEnemyData = NodePath("../Level1EnemyData")
+world = NodePath("../World")
