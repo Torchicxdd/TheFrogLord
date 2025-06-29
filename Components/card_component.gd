@@ -5,7 +5,7 @@ enum CardType {
 	MODIFIER,
 }
 
-@export var card_name: String = "DefaultCardName"
+@export var card_name: String = "Bohao"
 @export var cost: int = 1
 @export var card_type: CardType = CardType.CHARACTER
 

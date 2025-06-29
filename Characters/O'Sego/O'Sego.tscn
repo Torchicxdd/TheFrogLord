@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6swi45x40n71"]
+[gd_scene load_steps=7 format=3 uid="uid://b6swi45x40n71"]
 
+[ext_resource type="Script" uid="uid://c2febagopcfik" path="res://Characters/O'Sego/o'sego.gd" id="1_3jubt"]
 [ext_resource type="Texture2D" uid="uid://is3nlb4y8815" path="res://Characters/O'Sego/o'sego.png" id="1_6oh27"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_d8b27"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_27ohg"]
 [ext_resource type="PackedScene" uid="uid://bam7bedehv30h" path="res://Components/CharacterComponent.tscn" id="4_36l04"]
-[ext_resource type="Script" path="res://Components/trait_component.gd" id="4_o53f4"]
+[ext_resource type="Script" uid="uid://dwg37xjf7se4" path="res://Components/trait_component.gd" id="4_o53f4"]
 
 [node name="O\'sego" type="Node2D"]
+script = ExtResource("1_3jubt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_6oh27")
