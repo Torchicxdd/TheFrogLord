@@ -1,11 +1,14 @@
 class_name Cell extends Node2D
 
 enum INCOMING_LOCATION {SHOP, BOARD}
+enum CELL_TYPE {BENCH, BOARD, ENEMY}
 
 var is_occupied: bool = false
 var character: Character = null
 const x_offset = 0
 const y_offset = -30
+
+@export var cell_type: CELL_TYPE = CELL_TYPE.BOARD
 
 func clear_character() -> void:
 	is_occupied = false
@@ -40,3 +43,7 @@ func place_character(incoming_character: Character, place_type: INCOMING_LOCATIO
 				character.position += Vector2(x_offset, y_offset)
 				SignalBus.emit_signal("place_character", self)
 				SignalBus.emit_signal("remove_character", from)
+			
+		
+			# Update traits in TraitHud
+			SignalBus.emit_signal("update_traits", character, self, from)

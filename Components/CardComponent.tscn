@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://jct7kyv2xesr"]
 
 [ext_resource type="Script" uid="uid://dqqqdiydxh310" path="res://Components/card_component.gd" id="1_21elw"]
-[ext_resource type="Texture2D" uid="uid://b6nivwiq477db" path="res://Characters/Bohao/bohao_card.png" id="2_orpkw"]
+[ext_resource type="Texture2D" uid="uid://b46bp1xfdaglx" path="res://Characters/Bohao/bohao_card.png" id="2_orpkw"]
 
 [node name="CardComponent" type="Button"]
 anchors_preset = -1

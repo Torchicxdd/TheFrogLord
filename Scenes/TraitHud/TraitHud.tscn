@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://eqxhxx1eagjf"]
+
+[ext_resource type="Script" uid="uid://2s5vjoeka1x" path="res://Scenes/TraitHud/trait_hud.gd" id="1_8iaxt"]
+[ext_resource type="PackedScene" uid="uid://1swhc1xe0k20" path="res://Scenes/TraitHud/TraitBox.tscn" id="2_cjpom"]
+[ext_resource type="Texture2D" uid="uid://dsktta6gx34ue" path="res://Scenes/TraitHud/Badges/badge_brothers.png" id="3_ovc76"]
+[ext_resource type="Texture2D" uid="uid://ddrgte7mg4w03" path="res://Scenes/TraitHud/Badges/badge_nomads.png" id="4_753xt"]
+[ext_resource type="Texture2D" uid="uid://bjf6el7wqcymn" path="res://Scenes/TraitHud/Badges/badge_croakers.png" id="5_jtha6"]
+[ext_resource type="Texture2D" uid="uid://b1ynsdml5nq7b" path="res://Scenes/TraitHud/Badges/badge_wheezers.png" id="5_jvby4"]
+[ext_resource type="Texture2D" uid="uid://d2kavo3pe53qh" path="res://Scenes/TraitHud/Badges/badge_explorers.png" id="7_v4j8t"]
+
+[node name="TraitHud" type="Node2D"]
+script = ExtResource("1_8iaxt")
+
+[node name="Lovers" parent="." instance=ExtResource("2_cjpom")]
+
+[node name="Brothers" parent="." instance=ExtResource("2_cjpom")]
+offset_top = 96.0
+offset_bottom = 96.0
+trait_name = 3
+trait_label_name = "Brothers"
+image = ExtResource("3_ovc76")
+
+[node name="Nomads" parent="." instance=ExtResource("2_cjpom")]
+offset_top = 192.0
+offset_bottom = 192.0
+trait_name = 4
+trait_thresholds = Array[int]([1, 2, 3])
+trait_label_name = "Nomdas"
+image = ExtResource("4_753xt")
+
+[node name="Wheezers" parent="." instance=ExtResource("2_cjpom")]
+offset_top = 288.0
+offset_bottom = 288.0
+trait_name = 5
+trait_thresholds = Array[int]([2, 3, 4])
+trait_label_name = "Wheezers"
+image = ExtResource("5_jvby4")
+
+[node name="Croakers" parent="." instance=ExtResource("2_cjpom")]
+offset_top = 384.0
+offset_bottom = 384.0
+trait_thresholds = Array[int]([3, 5, 7])
+trait_label_name = "Croakers"
+image = ExtResource("5_jtha6")
+
+[node name="Explorers" parent="." instance=ExtResource("2_cjpom")]
+offset_top = 480.0
+offset_bottom = 480.0
+trait_thresholds = Array[int]([3, 5, 7])
+trait_label_name = "Explorers"
+image = ExtResource("7_v4j8t")

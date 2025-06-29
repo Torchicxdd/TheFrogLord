@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b46bp1xfdaglx"
-path="res://.godot/imported/bohao_card.png-9543957853a23a8a65c8badb76012bb3.ctex"
+uid="uid://d2kavo3pe53qh"
+path="res://.godot/imported/badge_explorers.png-72acd4bd003a5797caa5993367c731c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Bohao/bohao_card.png"
-dest_files=["res://.godot/imported/bohao_card.png-9543957853a23a8a65c8badb76012bb3.ctex"]
+source_file="res://Scenes/TraitHud/Badges/badge_explorers.png"
+dest_files=["res://.godot/imported/badge_explorers.png-72acd4bd003a5797caa5993367c731c8.ctex"]
 
 [params]
 

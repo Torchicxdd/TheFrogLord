@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b46bp1xfdaglx"
-path="res://.godot/imported/bohao_card.png-9543957853a23a8a65c8badb76012bb3.ctex"
+uid="uid://b6nivwiq477db"
+path="res://.godot/imported/bohao_card_old.png-66c5635607a160ee244409fc3e82151c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Bohao/bohao_card.png"
-dest_files=["res://.godot/imported/bohao_card.png-9543957853a23a8a65c8badb76012bb3.ctex"]
+source_file="res://Characters/Bohao/bohao_card_old.png"
+dest_files=["res://.godot/imported/bohao_card_old.png-66c5635607a160ee244409fc3e82151c.ctex"]
 
 [params]
 
