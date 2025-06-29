@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=15 format=3 uid="uid://cgfis7lbud4h2"]
 
-[ext_resource type="FontFile" uid="uid://b26i5rrvivsrq" path="res://Assets/Options/FreckleFace-Regular.ttf" id="1_p0ucp"]
-[ext_resource type="Texture2D" uid="uid://dl2ehp5slxbm1" path="res://Themes/BtnNormalbg.png" id="2_balt5"]
-[ext_resource type="Texture2D" uid="uid://cn4lguttlxwqu" path="res://Themes/BtnHoverbg.png" id="2_f7v51"]
-[ext_resource type="Texture2D" uid="uid://bsllx6r6qpti4" path="res://Themes/BtnPressedbg.png" id="4_p0ucp"]
-[ext_resource type="Texture2D" uid="uid://dx1m6nv7d6srt" path="res://Themes/tabsbg.png" id="5_ikh11"]
-[ext_resource type="Texture2D" uid="uid://bb2ag0aepbwfw" path="res://Themes/BtnActivebg.png" id="6_k15vc"]
+[ext_resource type="FontFile" uid="uid://bi5xtnt6cmyak" path="res://Assets/Options/FreckleFace-Regular.ttf" id="1_p0ucp"]
+[ext_resource type="Texture2D" uid="uid://b8su3jyghtbd3" path="res://Themes/BtnNormalbg.png" id="2_balt5"]
+[ext_resource type="Texture2D" uid="uid://vjhclmtnbphp" path="res://Themes/BtnHoverbg.png" id="2_f7v51"]
+[ext_resource type="Texture2D" uid="uid://dpu8c2pcpwqwg" path="res://Themes/BtnPressedbg.png" id="4_p0ucp"]
+[ext_resource type="Texture2D" uid="uid://cplxkon4k0es" path="res://Themes/tabsbg.png" id="5_ikh11"]
+[ext_resource type="Texture2D" uid="uid://deldt0isphs28" path="res://Themes/BtnActivebg.png" id="6_k15vc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0ucp"]
 texture = ExtResource("2_f7v51")
