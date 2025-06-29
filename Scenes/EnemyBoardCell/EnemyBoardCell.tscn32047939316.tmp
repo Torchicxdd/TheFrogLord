@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0qqsfcsjsfbn"]
+
+[ext_resource type="Script" uid="uid://b17q3ejh8lfol" path="res://Scenes/EnemyBoardCell/enemy_board_cell.gd" id="1_31011"]
+[ext_resource type="Texture2D" uid="uid://b10qgrj4gvfy6" path="res://Scenes/EnemyBoardCell/enemy_board_cell.png" id="1_y773n"]
+
+[node name="EnemyBoardCell" type="Node2D"]
+script = ExtResource("1_31011")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_y773n")
+centered = false

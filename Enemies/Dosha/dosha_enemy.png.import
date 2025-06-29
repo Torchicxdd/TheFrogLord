@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2c3jf6aw76lp"
-path="res://.godot/imported/bohao.png-eacf55dc6c0a479ac571338eb430de02.ctex"
+uid="uid://bhlxjyl6wi4tw"
+path="res://.godot/imported/dosha_enemy.png-2afabb4f8c27f019cf46b28816d653d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Bohao/bohao.png"
-dest_files=["res://.godot/imported/bohao.png-eacf55dc6c0a479ac571338eb430de02.ctex"]
+source_file="res://Enemies/Dosha/dosha_enemy.png"
+dest_files=["res://.godot/imported/dosha_enemy.png-2afabb4f8c27f019cf46b28816d653d9.ctex"]
 
 [params]
 

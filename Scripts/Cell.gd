@@ -7,11 +7,16 @@ var character: Character = null
 const x_offset = 0
 const y_offset = -30
 
+func clear_character() -> void:
+	is_occupied = false
+	character = null
+
 func place_character(incoming_character: Character, place_type: INCOMING_LOCATION, from: Cell = null) -> void:
 	match place_type:
 		INCOMING_LOCATION.SHOP:
 			is_occupied = true
 			character = incoming_character
+			character.reparent(self)
 			character.position = Vector2.ZERO
 			character.position += Vector2(x_offset, y_offset)
 		INCOMING_LOCATION.BOARD:
@@ -30,8 +35,9 @@ func place_character(incoming_character: Character, place_type: INCOMING_LOCATIO
 				# Take character
 				is_occupied = true
 				character = incoming_character
-				from.character = null
-				from.is_occupied = false
+				from.clear_character()
 				incoming_character.reparent(self)
 				character.position = Vector2.ZERO
 				character.position += Vector2(x_offset, y_offset)
+				SignalBus.emit_signal("place_character", self)
+				SignalBus.emit_signal("remove_character", from)
