@@ -2,40 +2,48 @@ class_name UserBoardCell extends Cell
 
 var is_placing_character: bool = false
 var is_hovering: bool = false
-var character_held: Character = null
-var character_from: Cell = null
-@onready var sprite = $Sprite2D
+var incoming_character: Character = null
+var from: Cell = null
+var mouse_offset = Vector2.ZERO
+@onready var sprite: Sprite2D = $Sprite2D
 
 func _ready() -> void:
-	SignalBus.connect("is_placing_character", Callable(self, "set_is_placing_character"))
+	SignalBus.connect("is_placing_character", Callable(self, "_is_placing_character"))
+	SignalBus.connect("is_not_placing_character", Callable(self, "_is_not_placing_character"))
+	SignalBus.connect("dropped_character", Callable(self, "_dropped_character"))
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("left_click"):
-		if not character == null:
-			SignalBus.emit_signal("is_placing_character", true, character, self)
-	
+	# Make sure this only gets called once by the cell placing
+	if from == self:
+		if is_placing_character:
+			character.position = get_global_mouse_position() + mouse_offset
 
-func set_is_placing_character(is_placing: bool, character: Character, cell: Cell) -> void:
-	is_placing_character = is_placing
-	if not is_placing_character:
-		character_held = null
-		character_from = null
-		sprite.texture = load("res://Scenes/UserBoardCell/user_board_cell.png")
-	else:
-		character_held = character
-		character_from = cell
+func _is_placing_character(character: Character, from_cell: Cell) -> void:
+	is_placing_character = true
+	incoming_character = character
+	from = from_cell
+	
+func _is_not_placing_character() -> void:
+	incoming_character = null
+	from = null
+
+func _dropped_character() -> void:
+	is_placing_character = false
 
 func _on_area_2d_mouse_entered() -> void:
+	is_hovering = true
 	if is_placing_character:
-		is_hovering = true
 		sprite.texture = load("res://Scenes/UserBoardCell/user_board_cell_hover.png")
 
 func _on_area_2d_mouse_exited() -> void:
-	if is_placing_character:
-		is_hovering = false
-		sprite.texture = load("res://Scenes/UserBoardCell/user_board_cell.png")
+	is_hovering = false
+	sprite.texture = load("res://Scenes/UserBoardCell/user_board_cell.png")
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_released("left_click") and is_hovering:
-		# Place character on cell
-		place_character(character_held, INCOMING_LOCATION.BOARD, character_from)
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("left_click") and is_hovering and is_occupied:
+		SignalBus.emit_signal("is_placing_character", character, self)
+		mouse_offset = Vector2.ZERO - get_global_mouse_position()
+	if event.is_action_released("left_click") and is_hovering and is_placing_character:
+		SignalBus.emit_signal("dropped_character")
+		place_character(incoming_character, Cell.INCOMING_LOCATION.BOARD, from)
+		SignalBus.emit_signal("is_not_placing_character")
