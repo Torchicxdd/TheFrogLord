@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://2dyqckrxh1ua"]
 
-[ext_resource type="Texture2D" uid="uid://bxdf2jwj5w7dj" path="res://Characters/Bek/bek.png" id="1_cqvh7"]
+[ext_resource type="Texture2D" uid="uid://bxdf2jwj5w7dj" path="res://Characters/Bek/bek_colorless.png" id="1_cqvh7"]
 [ext_resource type="Script" uid="uid://cvguxac30w0km" path="res://Characters/Bek/bek.gd" id="1_x1gks"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_88oqh"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_uge5g"]
@@ -21,5 +21,11 @@ position = Vector2(112, 72)
 
 [node name="CharacterComponent" parent="." instance=ExtResource("4_uge5g")]
 
-[node name="TraitComponent" type="Node" parent="."]
+[node name="Traits" type="Node" parent="."]
+
+[node name="TraitComponent" type="Node" parent="Traits"]
+script = ExtResource("4_88oqh")
+trait_name = 1
+
+[node name="TraitComponent2" type="Node" parent="Traits"]
 script = ExtResource("4_88oqh")

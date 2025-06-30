@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://otoejgjkjhby"]
 
-[ext_resource type="Texture2D" uid="uid://d18u06cdfi8ry" path="res://Characters/Hadosen/hadosen.png" id="1_5bqrp"]
+[ext_resource type="Texture2D" uid="uid://d18u06cdfi8ry" path="res://Characters/Hadosen/hadosen_colorless.png" id="1_5bqrp"]
 [ext_resource type="Script" uid="uid://d2m0xx5g76uxi" path="res://Characters/Hadosen/hadosen.gd" id="1_sts5r"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_37ybh"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_4u4in"]
@@ -21,5 +21,12 @@ position = Vector2(104, -40)
 
 [node name="CharacterComponent" parent="." instance=ExtResource("4_4u4in")]
 
-[node name="TraitComponent" type="Node" parent="."]
+[node name="Traits" type="Node" parent="."]
+
+[node name="TraitComponent" type="Node" parent="Traits"]
 script = ExtResource("4_37ybh")
+trait_name = 2
+
+[node name="TraitComponent2" type="Node" parent="Traits"]
+script = ExtResource("4_37ybh")
+trait_name = 5

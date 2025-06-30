@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpk5kaanbycw2"
-path="res://.godot/imported/seamus.png-9c464b91afe77571afadf9a6b11fb4f3.ctex"
+uid="uid://d3i12aujmnhq8"
+path="res://.godot/imported/dosha_card.png-dd6caeb75c26cd177c8b2ea5b8e9f2e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Seamus/seamus.png"
-dest_files=["res://.godot/imported/seamus.png-9c464b91afe77571afadf9a6b11fb4f3.ctex"]
+source_file="res://Characters/Dosha/dosha_card.png"
+dest_files=["res://.godot/imported/dosha_card.png-dd6caeb75c26cd177c8b2ea5b8e9f2e9.ctex"]
 
 [params]
 
