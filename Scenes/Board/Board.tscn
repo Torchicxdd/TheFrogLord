@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bin2ejjbl5j8y" path="res://Scenes/PlayBoard/PlayBoard.tscn" id="2_v1rvb"]
 [ext_resource type="PackedScene" uid="uid://sdg0ky55uhfa" path="res://Scenes/Resources/Resources.tscn" id="3_04rwb"]
 [ext_resource type="PackedScene" uid="uid://dm8ofkpy6d75g" path="res://Scenes/Shop/Shop.tscn" id="4_7sr81"]
-[ext_resource type="PackedScene" uid="uid://cw3htup5wtyvm" path="res://Scenes/FightButton/FightButton.tscn" id="6_4tpf7"]
 [ext_resource type="PackedScene" uid="uid://bfo5o0yb1ppbh" path="res://Scenes/LevelHud/LevelHud.tscn" id="7_6hni7"]
+[ext_resource type="PackedScene" uid="uid://dwpqy8oljk3qb" path="res://Scenes/FightButton/FightButtonButton.tscn" id="8_e4ntg"]
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_e4ntg")
@@ -23,8 +23,11 @@ position = Vector2(274.71, 953.59)
 [node name="Shop" parent="." instance=ExtResource("4_7sr81")]
 position = Vector2(494.83, 953.59)
 
-[node name="FightButton" parent="." instance=ExtResource("6_4tpf7")]
-position = Vector2(1624, 928)
-
 [node name="LevelHud" parent="." instance=ExtResource("7_6hni7")]
 position = Vector2(1743.34, 174.33)
+
+[node name="FightButtonButton" parent="." instance=ExtResource("8_e4ntg")]
+offset_left = 1624.0
+offset_top = 928.0
+offset_right = 1816.0
+offset_bottom = 1000.0
