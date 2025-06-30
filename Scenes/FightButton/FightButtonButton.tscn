@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwpqy8oljk3qb"]
+
+[ext_resource type="Texture2D" uid="uid://cynngncxtre5c" path="res://Scenes/FightButton/fight_button_rotated.png" id="1_kyw0e"]
+[ext_resource type="Script" uid="uid://15gtqiussa6b" path="res://Scenes/FightButton/fight_button.gd" id="1_lynee"]
+
+[node name="FightButtonButton" type="Button"]
+offset_right = 192.0
+offset_bottom = 72.0
+flat = true
+script = ExtResource("1_lynee")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kyw0e")
+centered = false

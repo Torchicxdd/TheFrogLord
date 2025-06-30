@@ -5,12 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_0oluh"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_v6j1t"]
 [ext_resource type="PackedScene" uid="uid://6xh74c6su10w" path="res://Components/EnemyComponent.tscn" id="4_v6j1t"]
-[ext_resource type="PackedScene" uid="uid://bam7bedehv30h" path="res://Components/CharacterComponent.tscn" id="4_vqh7y"]
+[ext_resource type="PackedScene" uid="uid://csxdi11ye3bdf" path="res://Components/MovementComponent.tscn" id="5_5piie"]
 
-[node name="DoshaEnemy" type="Node2D"]
+[node name="DoshaEnemy" type="Node2D" node_paths=PackedStringArray("dmg_component", "health_component", "movement_component")]
 z_index = 1
 scale = Vector2(0.35, 0.35)
 script = ExtResource("1_e4kx3")
+dmg_component = NodePath("DamageComponent")
+health_component = NodePath("HealthComponent")
+movement_component = NodePath("MovementComponent")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_qbe34")
@@ -22,6 +25,6 @@ position = Vector2(104, -48)
 
 [node name="DamageComponent" parent="." instance=ExtResource("3_v6j1t")]
 
-[node name="CharacterComponent" parent="." instance=ExtResource("4_vqh7y")]
+[node name="MovementComponent" parent="." instance=ExtResource("5_5piie")]
 
 [node name="EnemyComponent" parent="." instance=ExtResource("4_v6j1t")]
