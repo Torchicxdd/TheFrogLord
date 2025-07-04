@@ -1,1 +1,1 @@
-class_name DoshaEnemy extends Enemy
+extends Enemy

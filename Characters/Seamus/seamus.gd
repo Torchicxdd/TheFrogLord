@@ -1,1 +1,1 @@
-class_name Seamus extends Character
+extends Ally

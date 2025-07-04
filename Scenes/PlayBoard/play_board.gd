@@ -1,32 +1,10 @@
 class_name PlayBoard extends Node2D
 
-const BOARD_WIDTH = 6
-const BOARD_HEIGHT = 4
 var astar_grid = AStarGrid2D.new()
 @onready var userCellNodes = $UserCells.get_children()
 @onready var enemyCellNodes = $Enemycells.get_children()
 
-var cells: Array[Cell] = []
-var playboard_cells: Array[PlayBoardCell] = []
-const BOARD_SEPERATION = 12
-
-class PlayBoardCell:
-	var pos: Vector2i
-	var cell: Cell
-	var index: int
-	func _init(new_cell: Cell, new_index: int) -> void:
-		self.pos = find_pos(new_index)
-		self.cell = new_cell
-		self.index = new_index
-	
-	func find_pos(index) -> Vector2i:
-		var count = 0
-		for x in range(0, BOARD_WIDTH):
-			for y in range(0, BOARD_HEIGHT):
-				if count == index:
-					return Vector2i(x, y)
-				count += 1
-		return Vector2i(-1, -1)
+var cells: Array[BoardCell] = []
 
 func _ready() -> void:
 	SignalBus.connect("place_character", Callable(self, "place_character"))
@@ -40,19 +18,18 @@ func _ready() -> void:
 	setup_cells()
 
 func setup_cells() -> void:
-	var counter = 0
-	
+	var index = 0
 	for cell in range(userCellNodes.size()):
-		var new_playboard_cell = PlayBoardCell.new(userCellNodes[cell], cell)
-		playboard_cells.append(new_playboard_cell)
-		
-		counter += 1
+		var allyBoardCell: AllyBoardCell = BoardCell.new(index)
+		cells.append(allyBoardCell)
+		index += 1
 	for cell in range(enemyCellNodes.size()):
-		playboard_cells.append(PlayBoardCell.new(enemyCellNodes[cell], counter))
-		counter += 1
+		var enemyBoardCell: EnemyBoardCell = BoardCell.new(index)
+		cells.append(enemyBoardCell)
+		index += 1
 
 func setup_grid() -> void:
-	astar_grid.region = Rect2i(0, 0, BOARD_WIDTH, BOARD_HEIGHT)
+	astar_grid.region = Rect2i(0, 0, Globals.BOARD_WIDTH, Globals.BOARD_HEIGHT)
 	astar_grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER # SETTING THIS TO DIAGONAL MODE MAX PUTS IT TO NEVER
 	astar_grid.default_compute_heuristic = AStarGrid2D.HEURISTIC_MANHATTAN
 	astar_grid.default_estimate_heuristic = AStarGrid2D.HEURISTIC_MANHATTAN

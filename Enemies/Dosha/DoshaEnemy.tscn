@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc8n57q68p0sw"]
+[gd_scene load_steps=6 format=3 uid="uid://dc8n57q68p0sw"]
 
 [ext_resource type="Script" uid="uid://darin8kuipox8" path="res://Enemies/Dosha/dosha_enemy.gd" id="1_e4kx3"]
 [ext_resource type="Texture2D" uid="uid://bhlxjyl6wi4tw" path="res://Enemies/Dosha/dosha_enemy.png" id="1_qbe34"]
 [ext_resource type="PackedScene" uid="uid://b76xpikyy05vt" path="res://Components/HealthComponent.tscn" id="2_0oluh"]
 [ext_resource type="PackedScene" uid="uid://b18sdtpnk3m1q" path="res://Components/DamageComponent.tscn" id="3_v6j1t"]
-[ext_resource type="PackedScene" uid="uid://6xh74c6su10w" path="res://Components/EnemyComponent.tscn" id="4_v6j1t"]
 [ext_resource type="PackedScene" uid="uid://csxdi11ye3bdf" path="res://Components/MovementComponent.tscn" id="5_5piie"]
 
 [node name="DoshaEnemy" type="Node2D" node_paths=PackedStringArray("dmg_component", "health_component", "movement_component")]
@@ -26,5 +25,3 @@ position = Vector2(104, -48)
 [node name="DamageComponent" parent="." instance=ExtResource("3_v6j1t")]
 
 [node name="MovementComponent" parent="." instance=ExtResource("5_5piie")]
-
-[node name="EnemyComponent" parent="." instance=ExtResource("4_v6j1t")]

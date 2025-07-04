@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://yfuwp3knnjab"]
+[gd_scene load_steps=5 format=3 uid="uid://yfuwp3knnjab"]
 
-[ext_resource type="Script" uid="uid://vm8827jnvt7a" path="res://Scenes/UserBoardCell/user_board_cell.gd" id="1_kw2k1"]
+[ext_resource type="Script" uid="uid://mtvglfchhutu" path="res://Classes/AllyBoardCell.gd" id="1_kw2k1"]
 [ext_resource type="Texture2D" uid="uid://chmarfosmpr2s" path="res://Scenes/UserBoardCell/user_board_cell.png" id="1_qjlys"]
+[ext_resource type="PackedScene" uid="uid://cpkyuaktt8juf" path="res://Components/AttachableLocationComponent.tscn" id="3_osh0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjlys"]
 size = Vector2(176, 176)
@@ -16,9 +17,12 @@ position = Vector2(88, 88)
 shape = SubResource("RectangleShape2D_qjlys")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(88, 88)
 texture = ExtResource("1_qjlys")
-centered = false
 
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[node name="AttachableLocationComponent" parent="." node_paths=PackedStringArray("node", "body") instance=ExtResource("3_osh0o")]
+node = NodePath("..")
+body = NodePath("../Area2D")
+
+[connection signal="mouse_entered" from="Area2D" to="AttachableLocationComponent" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="AttachableLocationComponent" method="_on_area_2d_mouse_exited"]

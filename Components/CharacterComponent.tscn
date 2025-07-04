@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bam7bedehv30h"]
+[gd_scene load_steps=2 format=3 uid="uid://bqrrlw5akj0ga"]
 
-[ext_resource type="Script" uid="uid://cjjhr7ibji6jq" path="res://Components/character_component.gd" id="1_koxnh"]
+[sub_resource type="GDScript" id="GDScript_p5wrp"]
+script/source = "class_name Character extends Node2D
+
+@export var traits: Array[TraitComponent] = []
+@export var dmg_component: DamageComponent
+@export var health_component: HealthComponent
+@export var movement_component: MovementComponent
+"
 
 [node name="CharacterComponent" type="Node2D"]
-script = ExtResource("1_koxnh")
+script = SubResource("GDScript_p5wrp")

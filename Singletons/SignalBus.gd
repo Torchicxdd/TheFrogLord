@@ -16,3 +16,7 @@ signal place_character(cell: Cell)
 signal remove_character(cell: Cell)
 signal update_traits(character: Character, cell: Cell, from: Cell)
 signal start_round()
+
+
+# New Signals
+signal drop_attachable(attachable: Node)

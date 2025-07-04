@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://x8gkmd8p6pak"
 
 SignalBus="*res://Singletons/SignalBus.gd"
 PreloadedEnemies="*res://Enemies/PreloadedEnemies.gd"
+Globals="*res://Scripts/Globals.gd"
 
 [display]
 

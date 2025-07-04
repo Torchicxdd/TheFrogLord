@@ -1,4 +1,4 @@
-class_name Character extends Node2D
+class_name Character extends Node
 
 @export var traits: Array[TraitComponent] = []
 @export var dmg_component: DamageComponent

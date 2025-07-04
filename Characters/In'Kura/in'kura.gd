@@ -1,1 +1,1 @@
-class_name InKura extends Character
+extends Ally

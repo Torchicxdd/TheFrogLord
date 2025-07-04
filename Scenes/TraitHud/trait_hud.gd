@@ -1,17 +1,14 @@
 class_name TraitHud extends Node2D
 
-enum CELL_TYPE {BENCH, BOARD, ENEMY}
-
 func _ready() -> void:
 	SignalBus.connect("update_traits", Callable(self, "update_traits"))
 
 func update_traits(character: Character, cell: Cell, from: Cell) -> void:
-	print("Updating traits for character: ", character.name, " in cell: ", cell.name)
+	print("TraitHud update_traits: character:", character.name, ", cell: ", cell.name, ", from: ", from.name)
 	for t in character.traits:
-		print("Updating trait: ", t.trait_name)
 		var trait_box: TraitBox = get_child(t.trait_name)
 		if trait_box:
-			if cell.cell_type == CELL_TYPE.BOARD and from.cell_type == CELL_TYPE.BENCH:
+			if cell is BoardCell and from is BenchCell:
 				trait_box.update_trait_level(1)
-			elif cell.cell_type == CELL_TYPE.BENCH and from.cell_type == CELL_TYPE.BOARD:
+			elif cell is BenchCell and from is BoardCell:
 				trait_box.update_trait_level(-1)

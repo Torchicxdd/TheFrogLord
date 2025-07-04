@@ -1,1 +1,1 @@
-class_name Bek extends Character
+extends Ally

@@ -1,1 +1,1 @@
-class_name Dosha extends Character
+extends Ally

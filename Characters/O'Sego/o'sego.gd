@@ -1,1 +1,1 @@
-class_name OSego extends Character
+extends Ally

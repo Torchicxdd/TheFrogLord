@@ -1,1 +1,1 @@
-class_name Azhamin extends Character
+extends Ally

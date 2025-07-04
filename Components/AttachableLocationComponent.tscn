@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpkyuaktt8juf"]
+
+[ext_resource type="Script" uid="uid://b64srvl1wle7n" path="res://Components/attachable_location_component.gd" id="1_ow51e"]
+
+[node name="AttachableLocationComponent" type="Node2D"]
+script = ExtResource("1_ow51e")
