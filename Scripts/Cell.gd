@@ -35,15 +35,14 @@ func place_character(incoming_character: Character, place_type: INCOMING_LOCATIO
 				character.position += Vector2(x_offset, y_offset)
 			else:
 				# Take character
+				SignalBus.emit_signal("place_character", self)
+				SignalBus.emit_signal("remove_character", from)
 				is_occupied = true
 				character = incoming_character
 				from.clear_character()
 				incoming_character.reparent(self)
 				character.position = Vector2.ZERO
 				character.position += Vector2(x_offset, y_offset)
-				SignalBus.emit_signal("place_character", self)
-				SignalBus.emit_signal("remove_character", from)
-			
 		
 			# Update traits in TraitHud
 			SignalBus.emit_signal("update_traits", character, self, from)

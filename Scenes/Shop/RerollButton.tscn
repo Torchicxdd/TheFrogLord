@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ca508op51bl31"]
 
 [ext_resource type="Texture2D" uid="uid://dnc4i1dtlbpr" path="res://Scenes/Shop/reroll_button.png" id="1_ay64j"]
-[ext_resource type="Script" uid="uid://djyv0l5td0wsg" path="res://Scenes/Shop/reroll_button.gd" id="1_y5hd1"]
+[ext_resource type="Script" path="res://Scenes/Shop/reroll_button.gd" id="1_y5hd1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y5hd1"]
 
@@ -10,6 +10,7 @@ offset_right = 115.0
 offset_bottom = 44.0
 focus_mode = 0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_y5hd1")
+flat = true
 script = ExtResource("1_y5hd1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
