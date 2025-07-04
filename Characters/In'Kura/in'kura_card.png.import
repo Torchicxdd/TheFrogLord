@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpk5kaanbycw2"
-path="res://.godot/imported/seamus.png-9c464b91afe77571afadf9a6b11fb4f3.ctex"
+uid="uid://c7s17k1xwjin7"
+path="res://.godot/imported/in'kura_card.png-1c24f9fe62997add785532cdfe2c17e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Seamus/seamus.png"
-dest_files=["res://.godot/imported/seamus.png-9c464b91afe77571afadf9a6b11fb4f3.ctex"]
+source_file="res://Characters/In'Kura/in'kura_card.png"
+dest_files=["res://.godot/imported/in'kura_card.png-1c24f9fe62997add785532cdfe2c17e5.ctex"]
 
 [params]
 

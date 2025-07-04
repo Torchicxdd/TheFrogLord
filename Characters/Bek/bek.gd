@@ -1,1 +1,1 @@
-extends Character
+class_name Bek extends Character

@@ -1,1 +1,1 @@
-extends Character
+class_name Dosha extends Character

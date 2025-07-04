@@ -1,1 +1,1 @@
-extends Character
+class_name Azhamin extends Character
